@@ -1,0 +1,53 @@
+---
+title: "Objetos e Funções no R"
+author: "ana cristina fonseca"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+```{r}
+#Criando um objeto simples no R:
+
+numeros_pares <- c(2,4,6,8,10)
+numeros_impares <- c(1,3,5,7,9)
+
+#Criando funções no R:
+
+dados <- data.frame(numeros_pares, numeros_impares)
+
+#Rodando o modelo de regressão linear:
+
+modelo_regressao_linear <- lm(numeros_pares ~ numeros_impares, data= dados)
+
+summary(modelo_regressao_linear)
+
+str(modelo_regressao_linear)
+
+
+
+```
+
